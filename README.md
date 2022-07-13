@@ -10,7 +10,7 @@ Although smartphones have access to many sensors to perform environment detectio
 With BlueSeer, we show that a Bluetooth Low Energy radio is the only component required to accurately classify our environment on low-power, resource-limited IoT devices.
 BlueSeer achieves 84% accuracy, distingishing between 7 categories.
 
-## How to use
+## How to use BlueSeer
 
 The repository is divided into three main content: The python code to train the BlueSeer model, a raw dataset that needs to be parsed before training, and the C++ code for on-device inference.
 
@@ -29,8 +29,7 @@ In this paper, we demonstrate that a Bluetooth radio is the only component requi
 BlueSeer achieves an accuracy of up to 84% differentiating between 7 environments on resource-constrained devices, and requires only 12 ms for inference on a 64 MHz microcontroller-unit.
 
 To cite the paper, please use:
-> V. Poirot, O. Harms, H. Martens, O. Landsiedel. "BlueSeer: AI-Driven Environment Detection via BLE Scans", in the Proceedings of the Design Automation Conference (DAC),
-2022.
+> V. Poirot, O. Harms, H. Martens, O. Landsiedel. "BlueSeer: AI-Driven Environment Detection via BLE Scans", in the Proceedings of the Design Automation Conference (DAC), 2022.
 
 ## Disclaimer 
 > Although we tested the code extensively, BlueSeer is a research prototype that likely contain bugs. We take no responsibility for and give no warranties in respect of using the code.
