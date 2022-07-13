@@ -1,0 +1,6 @@
+label, device_count, lost_devices, new_devices, different_services, services_count, txpower_count, tx_power_avg, min_txpower, max_txpower, man_packet_len_count, manufacturer_data_lengths_sum, manufacturer_data_len_avg, avg_received, min_received, max_received, avg_avg_rssi, min_avg_rssi, max_avg_rssi, min_rssi, max_rssi, avg_rssi_difference, avg_avg_difference_between_beacons, avg_difference_first_last, 0af0, 1802, 180f, 1812, 1826, 2222, ec88, fd5a, fd6f, fdd2, fddf, fe03, fe07, fe0f, fe61, fe9f, fea0, feb9, febe, fee0, ff0d, ffc0, ffe0
+park, 2, 0, 0, 1, 1, 10, 8, 8, 8, 10, 11, 11, 14, 9, 19, -45, -45, -45, -52, -42, 8, 6744, 76534, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+park, 2, 0, 0, 1, 1, 12, 8, 8, 8, 12, 11, 11, 14, 9, 20, -49, -50, -48, -65, -46, 13, 7963, 89578, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+park, 2, 1, 0, 1, 1, 10, 8, 8, 8, 10, 11, 11, 15, 10, 20, -50, -51, -49, -68, -45, 15, 7163, 85674, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+park, 3, 0, 1, 1, 2, 9, 8, 8, 8, 9, 11, 11, 9, 1, 18, -63, -92, -49, -92, -44, 8, 4586, 54032, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+park, 2, 1, 0, 1, 1, 9, 8, 8, 8, 9, 11, 11, 14, 11, 18, -54, -55, -53, -65, -48, 15, 6877, 85451, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0

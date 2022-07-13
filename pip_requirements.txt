@@ -1,0 +1,8 @@
+sklearn
+tensorflow
+tensorflow-model-optimization
+pandas
+numpy
+matplotlib
+absl
+seaborn

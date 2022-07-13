@@ -1,0 +1,364 @@
+
+<html>
+<head>
+<style>
+body {font-family: sans-serif; background-color: #fa0;}
+table {background-color: #eca;}
+th {background-color: black; color: white;}
+h1 {
+  background-color: ffaa00;
+  padding:5px;
+  color: black;
+}
+
+svg {
+  margin: 10px;
+  border: 2px;
+  border-style: solid;
+  border-color: black;
+  background: white;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #fec;
+  padding:5px;
+  margin:5px;
+}
+
+.tooltip {color: blue;}
+.tooltip .tooltipcontent  {
+    visibility: hidden;
+    color: black;
+    background-color: yellow;
+    padding: 5px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 1;
+}
+.tooltip:hover .tooltipcontent {
+    visibility: visible;
+}
+
+.edges line {
+  stroke: #333;
+}
+
+text {
+  font-weight: bold;
+}
+
+.nodes text {
+  color: black;
+  pointer-events: none;
+  font-family: sans-serif;
+  font-size: 11px;
+}
+</style>
+
+<script src="https://d3js.org/d3.v4.min.js"></script>
+
+</head>
+<body>
+<h1>TensorFlow Lite Model</h2><table>
+<tr><th>filename</th><td>DAC/models/blueseer_model.tflite</td></tr>
+<tr><th>version</th><td>3</td></tr>
+<tr><th>description</th><td>[77, 76, 73, 82, 32, 67, 111, 110, 118, 101, 114, 116, 101, 100, 46]</td></tr>
+</table>
+<div class='subgraph'><h2>Subgraph 0</h2>
+<h3>Inputs/Outputs</h3>
+<table><tr>
+<tr>
+<th>inputs</th><th>outputs</th></tr>
+<tr>
+<td><span class='tooltip'><span class='tooltipcontent'>0 layer0_dense_input FLOAT32 [1, 115][-1, 115]<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>9 Identity FLOAT32 [1, 7][-1, 7]<br></span>[9]</span></td>
+</tr>
+</table>
+<h3>Tensors</h3>
+<table><tr>
+<tr>
+<th>index</th><th>name</th><th>type</th><th>shape</th><th>shape_signature</th><th>buffer</th><th>quantization</th></tr>
+<tr>
+<td>0</td><td>layer0_dense_input</td>
+<td>FLOAT32</td>
+<td>[1, 115]</td>
+<td>[-1, 115]</td>
+<td>1</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+<tr>
+<td>1</td><td>sequential_14/layer0_dense/MatMul</td>
+<td>INT8</td>
+<td>[500, 115]</td>
+<td>None</td>
+<td>2</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.0039032010827213526], 'zero_point': [0]}</td>
+</tr>
+<tr>
+<td>2</td><td>sequential_14/layer0_dense/BiasAdd/ReadVariableOp/resource</td>
+<td>INT32</td>
+<td>[500]</td>
+<td>None</td>
+<td>3</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.003725397400557995], 'zero_point': [0]}</td>
+</tr>
+<tr>
+<td>3</td><td>sequential_14/layer2_class_output/MatMul</td>
+<td>INT8</td>
+<td>[7, 500]</td>
+<td>None</td>
+<td>4</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.006302893627434969], 'zero_point': [0]}</td>
+</tr>
+<tr>
+<td>4</td><td>sequential_14/layer2_class_output/BiasAdd/ReadVariableOp/resource</td>
+<td>INT32</td>
+<td>[7]</td>
+<td>None</td>
+<td>5</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.0028572508599609137], 'zero_point': [0]}</td>
+</tr>
+<tr>
+<td>5</td><td>tfl.quantize</td>
+<td>INT8</td>
+<td>[1, 115]</td>
+<td>[-1, 115]</td>
+<td>6</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.9544466733932495], 'zero_point': [-121]}</td>
+</tr>
+<tr>
+<td>6</td><td>sequential_14/layer0_dense/MatMul;sequential_14/layer0_dense/Relu;sequential_14/layer0_dense/BiasAdd</td>
+<td>INT8</td>
+<td>[1, 500]</td>
+<td>[-1, 500]</td>
+<td>7</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.4533236622810364], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>7</td><td>sequential_14/layer2_class_output/MatMul;sequential_14/layer2_class_output/BiasAdd</td>
+<td>INT8</td>
+<td>[1, 7]</td>
+<td>[-1, 7]</td>
+<td>8</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [3.856980562210083], 'zero_point': [-20]}</td>
+</tr>
+<tr>
+<td>8</td><td>Identity1</td>
+<td>INT8</td>
+<td>[1, 7]</td>
+<td>[-1, 7]</td>
+<td>9</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': [0.00390625], 'zero_point': [-128]}</td>
+</tr>
+<tr>
+<td>9</td><td>Identity</td>
+<td>FLOAT32</td>
+<td>[1, 7]</td>
+<td>[-1, 7]</td>
+<td>10</td>
+<td>{'details': None, 'details_type': 0, 'max': None, 'min': None, 'quantized_dimension': 0, 'scale': None, 'zero_point': None}</td>
+</tr>
+</table>
+<h3>Ops</h3>
+<table><tr>
+<tr>
+<th>index</th><th>inputs</th><th>outputs</th><th>builtin_options</th><th>opcode_index</th></tr>
+<tr>
+<td>0</td><td><span class='tooltip'><span class='tooltipcontent'>0 layer0_dense_input FLOAT32 [1, 115][-1, 115]<br></span>[0]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>5 tfl.quantize INT8 [1, 115][-1, 115]<br></span>[5]</span></td>
+<td>None</td>
+<td>QUANTIZE (0)</td>
+</tr>
+<tr>
+<td>1</td><td><span class='tooltip'><span class='tooltipcontent'>5 tfl.quantize INT8 [1, 115][-1, 115]<br>1 sequential_14/layer0_dense/MatMul INT8 [500, 115]None<br>2 sequential_14/layer0_dense/BiasAdd/ReadVariableOp/resource INT32 [500]None<br></span>[5, 1, 2]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>6 sequential_14/layer0_dense/MatMul;sequential_14/layer0_dense/Relu;sequential_14/layer0_dense/BiasAdd INT8 [1, 500][-1, 500]<br></span>[6]</span></td>
+<td>{'asymmetric_quantize_inputs': False, 'fused_activation_function': 1, 'keep_num_dims': False, 'weights_format': 0}</td>
+<td>FULLY_CONNECTED (1)</td>
+</tr>
+<tr>
+<td>2</td><td><span class='tooltip'><span class='tooltipcontent'>6 sequential_14/layer0_dense/MatMul;sequential_14/layer0_dense/Relu;sequential_14/layer0_dense/BiasAdd INT8 [1, 500][-1, 500]<br>3 sequential_14/layer2_class_output/MatMul INT8 [7, 500]None<br>4 sequential_14/layer2_class_output/BiasAdd/ReadVariableOp/resource INT32 [7]None<br></span>[6, 3, 4]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>7 sequential_14/layer2_class_output/MatMul;sequential_14/layer2_class_output/BiasAdd INT8 [1, 7][-1, 7]<br></span>[7]</span></td>
+<td>{'asymmetric_quantize_inputs': False, 'fused_activation_function': 0, 'keep_num_dims': False, 'weights_format': 0}</td>
+<td>FULLY_CONNECTED (1)</td>
+</tr>
+<tr>
+<td>3</td><td><span class='tooltip'><span class='tooltipcontent'>7 sequential_14/layer2_class_output/MatMul;sequential_14/layer2_class_output/BiasAdd INT8 [1, 7][-1, 7]<br></span>[7]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>8 Identity1 INT8 [1, 7][-1, 7]<br></span>[8]</span></td>
+<td>{'beta': 1.0}</td>
+<td>SOFTMAX (2)</td>
+</tr>
+<tr>
+<td>4</td><td><span class='tooltip'><span class='tooltipcontent'>8 Identity1 INT8 [1, 7][-1, 7]<br></span>[8]</span></td>
+<td><span class='tooltip'><span class='tooltipcontent'>9 Identity FLOAT32 [1, 7][-1, 7]<br></span>[9]</span></td>
+<td>None</td>
+<td>DEQUANTIZE (3)</td>
+</tr>
+</table>
+<svg id='subgraph0' width='1600' height='900'></svg>
+
+  <script>
+    function buildGraph() {
+      // Build graph data
+      var graph = {"nodes": [{"id": "o0", "name": "QUANTIZE (0)", "group": 2, "x": 200, "y": 200}, {"id": "o1", "name": "FULLY_CONNECTED (1)", "group": 2, "x": 200, "y": 400}, {"id": "o2", "name": "FULLY_CONNECTED (1)", "group": 2, "x": 200, "y": 600}, {"id": "o3", "name": "SOFTMAX (2)", "group": 2, "x": 200, "y": 800}, {"id": "o4", "name": "DEQUANTIZE (3)", "group": 2, "x": 200, "y": 1000}, {"id": "t0", "name": "[] (0)", "group": 1, "x": 170, "y": 100.0}, {"id": "t1", "name": "[] (1)", "group": 1, "x": 340, "y": 300.0}, {"id": "t2", "name": "[] (2)", "group": 1, "x": 510, "y": 300.0}, {"id": "t3", "name": "[] (3)", "group": 1, "x": 340, "y": 500.0}, {"id": "t4", "name": "[] (4)", "group": 1, "x": 510, "y": 500.0}, {"id": "t5", "name": "[] (5)", "group": 1, "x": 170, "y": 300.0}, {"id": "t6", "name": "[] (6)", "group": 1, "x": 170, "y": 500.0}, {"id": "t7", "name": "[] (7)", "group": 1, "x": 170, "y": 700.0}, {"id": "t8", "name": "[] (8)", "group": 1, "x": 170, "y": 900.0}, {"id": "t9", "name": "[] (9)", "group": 1, "x": 170, "y": 1100.0}], "edges": [{"source": "t0", "target": "o0"}, {"target": "t5", "source": "o0"}, {"source": "t5", "target": "o1"}, {"source": "t1", "target": "o1"}, {"source": "t2", "target": "o1"}, {"target": "t6", "source": "o1"}, {"source": "t6", "target": "o2"}, {"source": "t3", "target": "o2"}, {"source": "t4", "target": "o2"}, {"target": "t7", "source": "o2"}, {"source": "t7", "target": "o3"}, {"target": "t8", "source": "o3"}, {"source": "t8", "target": "o4"}, {"target": "t9", "source": "o4"}]};
+
+      var svg = d3.select("#subgraph0")
+      var width = svg.attr("width");
+      var height = svg.attr("height");
+      // Make the graph scrollable.
+      svg = svg.call(d3.zoom().on("zoom", function() {
+        svg.attr("transform", d3.event.transform);
+      })).append("g");
+
+
+      var color = d3.scaleOrdinal(d3.schemeDark2);
+
+      var simulation = d3.forceSimulation()
+          .force("link", d3.forceLink().id(function(d) {return d.id;}))
+          .force("charge", d3.forceManyBody())
+          .force("center", d3.forceCenter(0.5 * width, 0.5 * height));
+
+      var edge = svg.append("g").attr("class", "edges").selectAll("line")
+        .data(graph.edges).enter().append("path").attr("stroke","black").attr("fill","none")
+
+      // Make the node group
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes)
+        .enter().append("g")
+        .attr("x", function(d){return d.x})
+        .attr("y", function(d){return d.y})
+        .attr("transform", function(d) {
+          return "translate( " + d.x + ", " + d.y + ")"
+        })
+        .attr("class", "nodes")
+          .call(d3.drag()
+              .on("start", function(d) {
+                if(!d3.event.active) simulation.alphaTarget(1.0).restart();
+                d.fx = d.x;d.fy = d.y;
+              })
+              .on("drag", function(d) {
+                d.fx = d3.event.x; d.fy = d3.event.y;
+              })
+              .on("end", function(d) {
+                if (!d3.event.active) simulation.alphaTarget(0);
+                d.fx = d.fy = null;
+              }));
+      // Within the group, draw a box for the node position and text
+      // on the side.
+
+      var node_width = 150;
+      var node_height = 30;
+
+      node.append("rect")
+          .attr("r", "5px")
+          .attr("width", node_width)
+          .attr("height", node_height)
+          .attr("rx", function(d) { return d.group == 1 ? 1 : 10; })
+          .attr("stroke", "#000000")
+          .attr("fill", function(d) { return d.group == 1 ? "#dddddd" : "#000000"; })
+      node.append("text")
+          .text(function(d) { return d.name; })
+          .attr("x", 5)
+          .attr("y", 20)
+          .attr("fill", function(d) { return d.group == 1 ? "#000000" : "#eeeeee"; })
+      // Setup force parameters and update position callback
+
+
+      var node = svg.selectAll(".nodes")
+        .data(graph.nodes);
+
+      // Bind the links
+      var name_to_g = {}
+      node.each(function(data, index, nodes) {
+        console.log(data.id)
+        name_to_g[data.id] = this;
+      });
+
+      function proc(w, t) {
+        return parseInt(w.getAttribute(t));
+      }
+      edge.attr("d", function(d) {
+        function lerp(t, a, b) {
+          return (1.0-t) * a + t * b;
+        }
+        var x1 = proc(name_to_g[d.source],"x") + node_width /2;
+        var y1 = proc(name_to_g[d.source],"y") + node_height;
+        var x2 = proc(name_to_g[d.target],"x") + node_width /2;
+        var y2 = proc(name_to_g[d.target],"y");
+        var s = "M " + x1 + " " + y1
+            + " C " + x1 + " " + lerp(.5, y1, y2)
+            + " " + x2 + " " + lerp(.5, y1, y2)
+            + " " + x2  + " " + y2
+      return s;
+    });
+
+  }
+  buildGraph()
+</script>
+</div><h2>Buffers</h2>
+<table><tr>
+<tr>
+<th>index</th><th>data</th></tr>
+<tr>
+<td>0</td><td>--</td>
+</tr>
+<tr>
+<td>1</td><td>--</td>
+</tr>
+<tr>
+<td>2</td><td>57500 bytes</td>
+</tr>
+<tr>
+<td>3</td><td>2000 bytes</td>
+</tr>
+<tr>
+<td>4</td><td>3500 bytes</td>
+</tr>
+<tr>
+<td>5</td><td>28 bytes</td>
+</tr>
+<tr>
+<td>6</td><td>--</td>
+</tr>
+<tr>
+<td>7</td><td>--</td>
+</tr>
+<tr>
+<td>8</td><td>--</td>
+</tr>
+<tr>
+<td>9</td><td>--</td>
+</tr>
+<tr>
+<td>10</td><td>--</td>
+</tr>
+<tr>
+<td>11</td><td>16 bytes</td>
+</tr>
+</table>
+<h2>Operator Codes</h2>
+<table><tr>
+<tr>
+<th>index</th><th>builtin_code</th><th>custom_code</th><th>version</th></tr>
+<tr>
+<td>0</td><td>QUANTIZE</td>
+<td></td>
+<td>1</td>
+</tr>
+<tr>
+<td>1</td><td>FULLY_CONNECTED</td>
+<td></td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td><td>SOFTMAX</td>
+<td></td>
+<td>2</td>
+</tr>
+<tr>
+<td>3</td><td>DEQUANTIZE</td>
+<td></td>
+<td>2</td>
+</tr>
+</table>
+</body></html>
