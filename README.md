@@ -29,7 +29,7 @@ In this paper, we demonstrate that a Bluetooth radio is the only component requi
 BlueSeer achieves an accuracy of up to 84% differentiating between 7 environments on resource-constrained devices, and requires only 12 ms for inference on a 64 MHz microcontroller-unit.
 
 To cite the paper, please use:
-> V. Poirot, O. Harms, H. Martens, O. Landsiedel. "BlueSeer: AI-Driven Environment Detection via BLE Scans", in the Proceedings of the Design Automation Conference (DAC), 2022.
+> V. Poirot, L. Harms, H. Martens, O. Landsiedel. "BlueSeer: AI-Driven Environment Detection via BLE Scans", in the Proceedings of the Design Automation Conference (DAC), 2022.
 
 ## Disclaimer 
 > Although we tested the code extensively, BlueSeer is a research prototype that likely contain bugs. We take no responsibility for and give no warranties in respect of using the code.
